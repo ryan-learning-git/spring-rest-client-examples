@@ -3,11 +3,15 @@ package guru.springframework.api.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
-public class User {
+public class User implements Serializable {
 
-    private Gender gender;
+    private final static long serialVersionUID = 270727596527329664L;
+
+    private String gender;
     private Name name;
     private Location location;
     private String email;

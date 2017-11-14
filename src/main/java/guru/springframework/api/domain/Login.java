@@ -3,9 +3,14 @@ package guru.springframework.api.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
-public class Login {
+public class Login implements Serializable {
+
+    private final static long serialVersionUID = 1041720428871730372L;
+
     private String username;
     private String password;
     private String md5;
